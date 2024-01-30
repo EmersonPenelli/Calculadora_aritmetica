@@ -1,47 +1,45 @@
-<script setup>
-import HelloWorld from './components/HelloWorld.vue'
-import TheWelcome from './components/TheWelcome.vue'
+<script>
+  import CalculadoraAritmetica from './components/CalculadoraAritmetica.vue';
+
+  export default {
+  components: {
+    CalculadoraAritmetica
+  }
+};
 </script>
 
 <template>
-  <header>
-    <img alt="Vue logo" class="logo" src="./assets/logo.svg" width="125" height="125" />
-
-    <div class="wrapper">
-      <HelloWorld msg="You did it!" />
+    <div id="app">
+      <CalculadoraAritmetica />
     </div>
-  </header>
-
-  <main>
-    <TheWelcome />
-  </main>
+  
 </template>
 
 <style scoped>
-header {
-  line-height: 1.5;
+
+#app {
+  font-family: 'Avenir', 'Helvetica', 'Arial', sans-serif;
+  text-align: center;
+  color: #2c3e50;
+  background: linear-gradient(135deg, #64bccf, #d17585); 
 }
 
-.logo {
-  display: block;
-  margin: 0 auto 2rem;
+input, select {
+  font-size: 22px; 
+  margin: 15px; 
+  padding: 15px; 
+  border-radius: 8px; 
+  border: none; 
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1); 
+  background-color: rgba(255, 255, 255, 0.9); 
 }
 
-@media (min-width: 1024px) {
-  header {
-    display: flex;
-    place-items: center;
-    padding-right: calc(var(--section-gap) / 2);
-  }
-
-  .logo {
-    margin: 0 2rem 0 0;
-  }
-
-  header .wrapper {
-    display: flex;
-    place-items: flex-start;
-    flex-wrap: wrap;
-  }
+select {
+  font-size: 30px; 
+  margin: 10px;
+  padding: 10px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  cursor: pointer;
 }
 </style>
